@@ -1,6 +1,6 @@
-from enum import Enum, EnumMeta
+from enum import EnumMeta
 
-version = "0.1"
+version = "0.2"
 
 
 def _iter_str(cls):
@@ -8,7 +8,7 @@ def _iter_str(cls):
         yield x
 
 
-_origin_contains = Enum.__contains__
+_origin_contains = EnumMeta.__contains__
 
 
 def _contains(cls, member):
